@@ -4,7 +4,7 @@
 Scraper that gets the announcements from EES postgraduate programme of NTUA.
 
 ## Simple Description
-A Node.js package that scraps the [EES site](http://mycourses.ntua.gr/courses/PSTGR1083/) and retrieve the announcements of thge programme.
+A Node.js package that scraps the [EES site](http://mycourses.ntua.gr/courses/PSTGR1083/) and retrieve the announcements of the programme.
 This package is quite useful for thesis work or other academic projects.
 
 ## Usage
