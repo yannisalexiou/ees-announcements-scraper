@@ -20,7 +20,6 @@ async function requestTo(url) {
 }
 
 async function getAnnouncement() {
-    console.log("Searching, please wait... 🕵🏻‍♂️");
     let html = await requestTo(announcementsLocation);
 
     var currentAnnouncement = findAnnouncements(allAnnouncementsSelector, html);
@@ -40,7 +39,6 @@ function findAnnouncementsTest(tableSelector, html) {
 }
 
 function findAnnouncements(tableSelector, html) {
-    console.log("eachAnnouncement");
     var $ = cheerio.load(html);
     var announcements = $(tableSelector).filter(function () {
         var data = $(this);
@@ -63,8 +61,7 @@ function findAnnouncements(tableSelector, html) {
         }
         allAnnouncement.push(eachItem);
     });
-    console.log("extitle: ",  allAnnouncement);
-    return announcements.text();
+    return allAnnouncement;
 }
 
 module.exports = {

@@ -7,6 +7,8 @@ async function getAnnouncements() {
     return allAnnouncements;
 }
 
+getAnnouncements();
+
 
 module.exports = {
     getAnnouncements
