@@ -13,10 +13,10 @@ async function requestTo(url) {
         const response = await fetch(url);
         const body = await response.textConverted();
         return body;
-      } catch (error) {
+    } catch (error) {
         console.log(error);
         return error
-      }
+    }
 }
 
 async function getAnnouncement() {
@@ -34,7 +34,7 @@ function findAnnouncementsTest(tableSelector, html) {
         return data;
     });
 
-    console.log("extitle: ",  announcements.text());
+    console.log("extitle: ", announcements.text());
     return announcements.text();
 }
 
@@ -52,7 +52,19 @@ function findAnnouncements(tableSelector, html) {
         //Each Selector
         var title = data.children().children().children().children().eq(1).text();
         var date = data.children().children().children().children().eq(3).text();
-        var text = data.nextUntil("table").text();
+        var text = "";
+
+        data.nextUntil("table").each(function() {
+            //Add space between each element
+            var currentString = $(this).text();
+            if(!/\s+$/.test(currentString)) {
+                currentString += " ";
+            }
+            text += currentString;
+        });
+        //Remove the last char if is the space.
+        if (/\s+$/.test(text)) text = text.slice(0, -1)
+
         //Make Object
         var eachItem = {
             title: title,
