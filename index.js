@@ -6,7 +6,7 @@ async function getAnnouncements() {
     console.log("allAnnouncements: ", allAnnouncements);
     return allAnnouncements;
 }
-getAnnouncements();
+
 module.exports = {
     getAnnouncements
 }

@@ -55,9 +55,10 @@ function findAnnouncements(tableSelector, html) {
         var text = "";
 
         data.nextUntil("table").each(function() {
-            //Add space between each element
             var currentString = $(this).text();
             if(!/\s+$/.test(currentString)) {
+                //Add space between each element
+                
                 currentString += " ";
             }
             text += currentString;
