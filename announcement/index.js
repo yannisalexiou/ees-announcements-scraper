@@ -52,7 +52,7 @@ function findAnnouncements(tableSelector, html) {
         allAnnouncement.push(eachItem);
     });
     return allAnnouncement;
-};
+}
 
 async function requestTo(url) {
     try {
@@ -69,7 +69,7 @@ async function getAnnouncement() {
 
     var currentAnnouncement = findAnnouncements(allAnnouncementsSelector, html);
     return currentAnnouncement;
-};
+}
 
 module.exports = {
     getAnnouncement
