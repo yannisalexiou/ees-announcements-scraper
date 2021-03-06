@@ -44,7 +44,7 @@ function findAnnouncements(tableSelector, html) {
         });
         //Remove the last char if is the space.
         if (/\s+$/.test(text)) {
-            text = text.slice(0, -1)
+            text = text.slice(0, -1);
         }
 
         //Make Object
