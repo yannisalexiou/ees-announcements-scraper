@@ -1,6 +1,7 @@
 # ees-announcements-scraper
 [![NPM](https://nodei.co/npm/ees-announcements-scraper.png?compact=true)](https://nodei.co/npm/ees-announcements-scraper/)
 
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/5e996492449e404d9cbec0ceaa80f718)](https://www.codacy.com/gh/yannisalexiou/ees-announcements-scraper/dashboard?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=yannisalexiou/ees-announcements-scraper&amp;utm_campaign=Badge_Grade)
 [![npm version](https://badge.fury.io/js/ees-announcements-scraper.svg)](https://badge.fury.io/js/ees-announcements-scraper)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
