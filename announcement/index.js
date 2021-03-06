@@ -8,23 +8,6 @@ const eachAnnouncementSelector = "div#claroBody>table";
 //Link
 const announcementsLocation = "http://mycourses.ntua.gr/announcements/announcements.php?cidReq=PSTGR1083";
 
-async function requestTo(url) {
-    try {
-        const response = await fetch(url);
-        const body = await response.textConverted();
-        return body;
-    } catch (error) {
-        return error
-    }
-};
-
-async function getAnnouncement() {
-    let html = await requestTo(announcementsLocation);
-
-    var currentAnnouncement = findAnnouncements(allAnnouncementsSelector, html);
-    return currentAnnouncement;
-};
-
 function findAnnouncementsTest(tableSelector, html) {
     var $ = cheerio.load(html);
     var announcements = $(tableSelector).filter(function () {
@@ -60,17 +43,32 @@ function findAnnouncements(tableSelector, html) {
             text += currentString;
         });
         //Remove the last char if is the space.
-        if (/\s+$/.test(text)) text = text.slice(0, -1)
+        if (/\s+$/.test(text)) {
+            text = text.slice(0, -1)
+        }
 
         //Make Object
-        var eachItem = {
-            title: title,
-            date: date,
-            text: text
-        }
+        var eachItem = {title, date, text};
         allAnnouncement.push(eachItem);
     });
     return allAnnouncement;
+};
+
+async function requestTo(url) {
+    try {
+        const response = await fetch(url);
+        const body = await response.textConverted();
+        return body;
+    } catch (error) {
+        return error;
+    }
+}
+
+async function getAnnouncement() {
+    let html = await requestTo(announcementsLocation);
+
+    var currentAnnouncement = findAnnouncements(allAnnouncementsSelector, html);
+    return currentAnnouncement;
 };
 
 module.exports = {

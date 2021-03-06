@@ -29,9 +29,9 @@ eesAnnouncements.then(function (results) {
 ## Functions Documentation
 ### getAnnouncements
 Returns all announcements as an array of objects with the below details:
-* title
-* date
-* text
+*	title
+*	date
+*	text
 
 ## License
 GNU GPLv3
