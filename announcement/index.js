@@ -15,7 +15,7 @@ function findAnnouncementsTest(tableSelector, html) {
         return data;
     });
     return announcements.text();
-};
+}
 
 function findAnnouncements(tableSelector, html) {
     var $ = cheerio.load(html);
