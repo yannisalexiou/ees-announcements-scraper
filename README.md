@@ -1,4 +1,7 @@
 # ees-announcements-scraper
+[![NPM](https://nodei.co/npm/ees-announcements-scraper.png?compact=true)](https://nodei.co/npm/ees-announcements-scraper/)
+
+[![npm version](https://badge.fury.io/js/ees-announcements-scraper.svg)](https://badge.fury.io/js/ees-announcements-scraper)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
 Scraper that gets the announcements from EES postgraduate programme of NTUA.
