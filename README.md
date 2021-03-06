@@ -11,7 +11,7 @@ This package is quite useful for thesis work or other academic projects.
 
 ### Install
 First install the package using npm:
-```
+```properties
 npm install --save ees-announcements-scraper
 ```
 

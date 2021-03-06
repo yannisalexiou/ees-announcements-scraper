@@ -14,29 +14,25 @@ async function requestTo(url) {
         const body = await response.textConverted();
         return body;
     } catch (error) {
-        console.log(error);
         return error
     }
-}
+};
 
 async function getAnnouncement() {
     let html = await requestTo(announcementsLocation);
 
     var currentAnnouncement = findAnnouncements(allAnnouncementsSelector, html);
     return currentAnnouncement;
-}
+};
 
 function findAnnouncementsTest(tableSelector, html) {
-    console.log("eachAnnouncement");
     var $ = cheerio.load(html);
     var announcements = $(tableSelector).filter(function () {
         var data = $(this);
         return data;
     });
-
-    console.log("extitle: ", announcements.text());
     return announcements.text();
-}
+};
 
 function findAnnouncements(tableSelector, html) {
     var $ = cheerio.load(html);
@@ -75,8 +71,8 @@ function findAnnouncements(tableSelector, html) {
         allAnnouncement.push(eachItem);
     });
     return allAnnouncement;
-}
+};
 
 module.exports = {
     getAnnouncement
-}
+};
