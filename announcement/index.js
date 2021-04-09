@@ -46,6 +46,11 @@ function findAnnouncements(tableSelector, html) {
         if (/\s+$/.test(text)) {
             text = text.slice(0, -1);
         }
+        //Remove frist character if is space
+        title = title.replace(/^\s/, '');
+        date = date.replace(/^\s/, '');
+        text = text.replace(/\s\s+/g, ' '); //Multiple Spaces to Single Space
+        text = text.replace(/^\s/, '');
 
         //Make Object
         var eachItem = {title, date, text};
