@@ -5,6 +5,8 @@
 [![npm version](https://badge.fury.io/js/ees-announcements-scraper.svg)](https://badge.fury.io/js/ees-announcements-scraper)
 [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
+[![NPM Publish](https://github.com/yannisalexiou/ees-announcements-scraper/actions/workflows/npm-publish.yml/badge.svg)](https://github.com/yannisalexiou/ees-announcements-scraper/actions/workflows/npm-publish.yml)
+
 Scraper that gets the announcements from EES postgraduate programme of NTUA.
 
 ## Simple Description
