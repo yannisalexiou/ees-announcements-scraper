@@ -30,20 +30,20 @@ function findAnnouncements(announcementSelector, html) {
     announcements.children().each(function () {
         var data = $(this);
         //Each Selector
-        var title = data.children().eq(0).text()
-        var date = data.children().eq(1).text()
-        var text = data.children().eq(2).text()
-        var htmlText = data.children().eq(2).html()
+        var title = data.children().eq(0).text();
+        var date = data.children().eq(1).text();
+        var text = data.children().eq(2).text();
+        var htmlText = data.children().eq(2).html();
         
         //Remove the last char if is the space.
         if (/\s+$/.test(text)) {
             text = text.slice(0, -1);
         }
         //Remove frist character if is space
-        title = title.replace(/^\s/, '');
-        date = date.replace(/^\s/, '');
-        text = text.replace(/\s\s+/g, ' '); //Multiple Spaces to Single Space
-        text = text.replace(/^\s/, '');
+        title = title.replace(/^\s/, "");
+        date = date.replace(/^\s/, "");
+        text = text.replace(/\s\s+/g, " "); //Multiple Spaces to Single Space
+        text = text.replace(/^\s/, "");
 
         //Make Object
         var eachItem = {title, date, text, htmlText};
