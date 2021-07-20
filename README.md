@@ -38,6 +38,7 @@ Returns all announcements as an array of objects with the below details:
 * title
 * date
 * text
+* htmlText
 
 ## License
 GNU GPLv3
