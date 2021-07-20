@@ -18,7 +18,6 @@ function findAnnouncementsTest(announcementSelector, html) {
 }
 
 function findAnnouncements(announcementSelector, html) {
-    debugger;
     var $ = cheerio.load(html);
     var announcements = $(announcementSelector).filter(function () {
         var data = $(this);
