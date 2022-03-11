@@ -3,19 +3,9 @@ const fetch = require("node-fetch"); //Helps us make HTTP calls
 
 //All Announcements
 const allAnnouncementsSelector = "div#claroBody>div";
-const eachAnnouncementSelector = "div#claroBody>div>div:nth-child(3)";
 
 //Link
 const announcementsLocation = "http://mycourses.ntua.gr/announcements/announcements.php?cidReq=PSTGR1083";
-
-function findAnnouncementsTest(announcementSelector, html) {
-    var $ = cheerio.load(html);
-    var announcements = $(announcementSelector).filter(function () {
-        var data = $(this);
-        return data;
-    });
-    return announcements.text();
-}
 
 function findAnnouncements(announcementSelector, html) {
     var $ = cheerio.load(html);
@@ -32,7 +22,7 @@ function findAnnouncements(announcementSelector, html) {
         var title = data.children().eq(0).text();
         var date = data.children().eq(1).text();
         var text = data.children().eq(2).text();
-        var htmlText = data.children().eq(2).html();
+        var htmlText = data.children().eq(2).children().html();
         
         //Remove the last char if is the space.
         if (/\s+$/.test(text)) {
