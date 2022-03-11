@@ -1,6 +1,6 @@
 {
   "name": "ees-announcements-scraper",
-  "version": "2.0.2",
+  "version": "2.0.3",
   "description": "Scraper that gets the announcements from EES postgraduate programme of NTUA",
   "main": "index.js",
   "scripts": {
